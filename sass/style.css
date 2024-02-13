@@ -429,6 +429,7 @@ button {
   gap: 2.5vmax;
   overflow: auto;
   transition: 0.25s linear;
+  border-radius: 12px;
 }
 .wrapper .sec2 .card-slider .cards-holder::-webkit-scrollbar {
   display: none;

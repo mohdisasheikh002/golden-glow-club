@@ -463,10 +463,11 @@ button {
         display: flex;
         align-items: center;
         justify-content: start;
+
         gap: 2.5vmax;
         overflow: auto;
         transition: 0.25s linear;
-
+        border-radius: 12px;
         &::-webkit-scrollbar {
           display: none;
         }
