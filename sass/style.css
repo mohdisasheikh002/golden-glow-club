@@ -324,6 +324,7 @@ button {
     height: fit-content;
   }
   .wrapper .sec1 .content-box h1 {
+    line-height: 7.5vmax;
     padding: 0 6vmax;
   }
   .wrapper .sec1 .content-box p {
@@ -364,7 +365,6 @@ button {
     padding: 0 2vmax;
   }
   .wrapper .sec1 .content-box p {
-    margin-top: 1vmax;
     padding: 0 2vmax;
   }
 }

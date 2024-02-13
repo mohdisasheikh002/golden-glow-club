@@ -352,6 +352,7 @@ button {
         height: fit-content;
 
         h1 {
+          line-height: 7.5vmax;
           padding: 0 6vmax;
         }
 
@@ -396,7 +397,6 @@ button {
         }
 
         p {
-          margin-top: 1vmax;
           padding: 0 2vmax;
         }
       }
