@@ -93,8 +93,90 @@ button {
     padding: 1.4vmax 2.8vmax;
   }
 }
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cfa078;
+  transition: 0.25s linaer;
+}
+.loader .ellipsis-box {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loader .ellipsis-box .ellipsis {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.loader .ellipsis-box .ellipsis:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.loader .ellipsis-box .ellipsis:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.loader .ellipsis-box .ellipsis:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.loader .ellipsis-box .ellipsis:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+@keyframes key {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50%, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
 .wrapper {
   position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
 }
 .wrapper .nav {
@@ -267,6 +349,8 @@ button {
 .wrapper .sec1 .content-box h1 {
   text-transform: capitalize;
   padding: 0 28vmax;
+  opacity: 0;
+  transition: all 0.25s linear;
 }
 .wrapper .sec1 .content-box h1 span {
   font-family: gilroyMedium;
@@ -276,9 +360,10 @@ button {
   font-size: 1vmax;
   line-height: 1.5vmax;
   font-family: gilroyMedium;
-  opacity: 0.4;
   margin-top: 1vmax;
   padding: 0 30vmax;
+  opacity: 0;
+  transition: all 0.25s linear;
 }
 .wrapper .sec1 .content-box button {
   position: relative;
@@ -306,13 +391,14 @@ button {
   z-index: -2;
 }
 .wrapper .sec1 .img-box img {
-  height: 100%;
+  height: 0%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center -9vmax;
      object-position: center -9vmax;
   filter: grayscale(1);
+  transition: 0.8s ease-in;
 }
 @media (max-width: 30cm) {
   .wrapper .sec1 {
