@@ -1079,6 +1079,7 @@ button {
   padding: 0.8vmax 0vmax;
   width: 30vmax;
   cursor: pointer;
+  color: #fefefe;
 }
 .wrapper .sec6 .row-box .email-box input:focus {
   outline: none;
