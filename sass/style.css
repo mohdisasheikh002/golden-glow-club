@@ -1196,6 +1196,7 @@ button {
     font-size: 1.5vmax;
     width: 100%;
     margin-top: 1.5vmax;
+    color: #fefefe;
   }
   .wrapper .sec6 .row-box .email-box button {
     height: 5vmax;
