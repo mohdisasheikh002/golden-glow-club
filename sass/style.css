@@ -251,8 +251,8 @@ button {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center -0.4vmax;
+     object-position: center -0.4vmax;
 }
 .wrapper .nav .nrgt .ri-shopping-cart-line {
   font-size: 1.5vmax;
@@ -391,14 +391,15 @@ button {
   z-index: -2;
 }
 .wrapper .sec1 .img-box img {
-  height: 0%;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center -9vmax;
      object-position: center -9vmax;
   filter: grayscale(1);
-  transition: 0.8s ease-in;
+  transition: 0.25s linear;
+  opacity: 0;
 }
 @media (max-width: 30cm) {
   .wrapper .sec1 {
@@ -1144,6 +1145,11 @@ button {
   display: block;
   text-decoration: none;
   opacity: 0.4;
+  transition: 0.25s linear;
+}
+.wrapper .sec6 .row-box .link-box a:hover {
+  opacity: 1;
+  transition: 0.25s linear;
 }
 .wrapper .sec6 .row-box .social-box {
   height: -moz-fit-content;
@@ -1227,4 +1233,20 @@ button {
   .wrapper .sec6 {
     padding: 3.5vmax 2.5vmax;
   }
+}
+
+/* width */
+body::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 0.6vmax;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #cfa078;
 }/*# sourceMappingURL=style.css.map */

@@ -18,9 +18,10 @@ function loader() {
           loader.style.display = none;
         },
         onUpdate: () => {
+          wrapper.style.height = "fit-content";
           wrapper.style.overflow = "visible";
           gsap.to(".sec1 .img-box img", {
-            height: "100%",
+            opacity: "1",
           });
           gsap.to(".anim-elem1", {
             opacity: 1,

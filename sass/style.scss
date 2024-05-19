@@ -263,7 +263,7 @@ button {
           width: 2.8vmax;
           border-radius: 50%;
           object-fit: cover;
-          object-position: top;
+          object-position: center -0.4vmax;
         }
       }
 
@@ -424,12 +424,13 @@ button {
       z-index: -2;
 
       img {
-        height: 0%;
+        height: 100%;
         width: 100%;
         object-fit: cover;
         object-position: center -9vmax;
         filter: grayscale(1);
-        transition: 0.8s ease-in;
+        transition: 0.25s linear;
+        opacity: 0;
       }
     }
   }
@@ -1271,6 +1272,12 @@ button {
           display: block;
           text-decoration: none;
           opacity: 0.4;
+          transition: 0.25s linear;
+
+          &:hover {
+            opacity: 1;
+            transition: 0.25s linear;
+          }
         }
       }
 
@@ -1370,4 +1377,20 @@ button {
       padding: 3.5vmax 2.5vmax;
     }
   }
+}
+
+/* width */
+body::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 0.6vmax;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #cfa078;
 }
